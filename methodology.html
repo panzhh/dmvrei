@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Methodology — DMV Real Estate Research Institute</title>
+<meta name="description" content="How the DMV Housing Index is built: a repeat-sales price index of Bright MLS closed transactions across D.C., Maryland, and Northern Virginia.">
+<link rel="icon" href="assets/logo.svg" type="image/svg+xml">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Source+Serif+4:ital,opsz,wght@0,8..60,400;0,8..60,500;0,8..60,600;0,8..60,700;1,8..60,500&family=IBM+Plex+Sans:wght@400;500;600&family=IBM+Plex+Mono:wght@400;500;600&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="css/styles.css">
+</head>
+<body>
+
+<div class="masthead-bar">
+  <div class="wrap">
+    <span>Washington Metro Edition</span>
+    <span>Updated Quarterly · Data via Bright MLS</span>
+  </div>
+</div>
+
+<header class="masthead">
+  <div class="wrap">
+    <a class="brand" href="index.html">
+      <div class="brand-eyebrow">Independent Housing Market Research</div>
+      <div class="brand-name">DMV Real Estate<br>Research Institute</div>
+    </a>
+    <nav class="main-nav" aria-label="Primary">
+      <a href="index.html">Index</a>
+      <a href="research.html">Research</a>
+      <a href="methodology.html">Methodology</a>
+      <a href="about.html">About</a>
+      <a href="contact.html">Contact</a>
+    </nav>
+  </div>
+</header>
+
+<main>
+  <section class="page-hero">
+    <div class="wrap">
+      <div class="kicker">How the index is built</div>
+      <h1>Methodology</h1>
+      <p>The DMV Housing Index is a repeat-sales price index. It measures price change by comparing each home to its own prior sale — not by averaging whatever happened to close in a given quarter.</p>
+    </div>
+  </section>
+
+  <section>
+    <div class="wrap">
+      <div class="two-col">
+        <div class="prose dropcap">
+          <h2>Source data</h2>
+          <p>Readings are computed from closed residential transactions recorded through Bright MLS across the District of Columbia, the Northern Virginia counties and independent cities (Arlington, Fairfax, Loudoun, Prince William, Alexandria, Falls Church, Fairfax City), and the suburban Maryland counties (Montgomery, Prince George's, and, where volume supports it, Frederick, Howard, Anne Arundel, and Charles).</p>
+          <p>Only arm's-length sales of single-family homes, townhouses, and condominiums are included. New construction, non-arm's-length transfers, foreclosure and estate sales, and records with missing or implausible price or date fields are excluded before the index is computed.</p>
+
+          <h2>The repeat-sales method</h2>
+          <p>Every property that has sold at least twice contributes a price relative — the ratio of its later sale price to its earlier one. The index is the sequence of period-to-period factors that best fits all observed relatives, in the tradition of Bailey–Muth–Nourse and the later Case–Shiller weighting. Because each pair holds the physical home constant, the method removes the composition effect that moves median and average price series when the mix of what sells changes.</p>
+          <p>Pairs are down-weighted when the two sales are far apart in time (wider scope for unobserved renovation or depreciation) and when either price is a statistical outlier relative to its submarket. Homes with evidence of major renovation between sales are dropped.</p>
+
+          <h2>Geography and timing</h2>
+          <p>Submarkets are defined by county or independent city and, where transaction volume supports a stable estimate, by ZIP code. The regional composite is a transaction-weighted aggregate of the submarket indices.</p>
+          <p>Each reading uses a trailing three-month window of closings and is re-based so that Q1 2024 = 100. Readings are not seasonally adjusted. The most recent quarter is preliminary and is revised once the following quarter's closings are recorded and late entries settle; revisions are logged and dated.</p>
+
+          <h2>Update cadence</h2>
+          <p>The published figures refresh on a quarterly schedule. Between releases, the underlying dataset is reprocessed as new closings post, so intra-quarter readings on the site may move slightly before the quarter is finalized.</p>
+
+          <h2>Known limitations</h2>
+          <ul>
+            <li>Thin submarkets produce noisier estimates; ZIP-level readings are suppressed below a minimum pair count.</li>
+            <li>The method assumes no systematic quality change between a home's two sales; unreported renovation biases individual pairs upward.</li>
+            <li>Cash and off-market transactions that never touch the MLS are not captured.</li>
+            <li>The index measures price change, not affordability or transaction volume — those are covered by separate programs.</li>
+          </ul>
+
+          <h2>Corrections</h2>
+          <p>Errors are corrected in place, noted in a dated changelog, and — when a correction materially changes a published reading — called out in the next briefing.</p>
+
+          <a class="doc-link" href="contact.html">Questions about the method? Get in touch →</a>
+        </div>
+
+        <div class="about-card">
+          <h3>At a glance</h3>
+          <p><strong>Type:</strong> repeat-sales price index</p>
+          <p><strong>Base:</strong> Q1 2024 = 100</p>
+          <p><strong>Source:</strong> Bright MLS closed transactions</p>
+          <p><strong>Coverage:</strong> D.C., Northern Virginia, suburban Maryland — 40+ submarkets</p>
+          <p><strong>Window:</strong> trailing 3 months per reading</p>
+          <p><strong>Adjustment:</strong> none (not seasonally adjusted)</p>
+          <p><strong>Revisions:</strong> prior quarter revised once, then final</p>
+          <p><strong>Cadence:</strong> published quarterly</p>
+        </div>
+      </div>
+    </div>
+  </section>
+</main>
+
+<div class="subscribe" id="subscribe">
+  <div class="wrap">
+    <div>
+      <h2>Get the briefing</h2>
+      <p>Quarterly index readings and submarket notes, direct to your inbox. No spam, unsubscribe anytime.</p>
+    </div>
+    <form class="sub-form">
+      <input type="email" placeholder="you@email.com" aria-label="Email address" required>
+      <button type="submit">Subscribe</button>
+      <span class="sub-msg" role="status" aria-live="polite"></span>
+    </form>
+  </div>
+</div>
+
+<footer class="site-footer">
+  <div class="wrap">
+    <span>DMV Real Estate Research Institute · © <span data-year>2026</span></span>
+    <span class="disclosure">Index data sourced from Bright MLS closed transactions. Not a substitute for a comparative market analysis — for a property-specific valuation, contact a licensed agent.</span>
+  </div>
+</footer>
+
+<script src="js/main.js"></script>
+</body>
+</html>

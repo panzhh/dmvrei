@@ -1,0 +1,255 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>DMV Real Estate Research Institute — The DMV Housing Index</title>
+<meta name="description" content="Independent, data-driven housing research for Washington, D.C., Maryland, and Northern Virginia. The DMV Housing Index tracks repeat closed sales across 40+ submarkets.">
+<link rel="icon" href="assets/logo.svg" type="image/svg+xml">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Source+Serif+4:ital,opsz,wght@0,8..60,400;0,8..60,500;0,8..60,600;0,8..60,700;1,8..60,500&family=IBM+Plex+Sans:wght@400;500;600&family=IBM+Plex+Mono:wght@400;500;600&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="css/styles.css">
+</head>
+<body>
+
+<div class="masthead-bar">
+  <div class="wrap">
+    <span>Washington Metro Edition</span>
+    <span>Updated Quarterly · Data via Bright MLS</span>
+  </div>
+</div>
+
+<header class="masthead">
+  <div class="wrap">
+    <a class="brand" href="index.html">
+      <div class="brand-eyebrow">Independent Housing Market Research</div>
+      <div class="brand-name">DMV Real Estate<br>Research Institute</div>
+    </a>
+    <nav class="main-nav" aria-label="Primary">
+      <a href="index.html">Index</a>
+      <a href="research.html">Research</a>
+      <a href="methodology.html">Methodology</a>
+      <a href="about.html">About</a>
+      <a href="contact.html">Contact</a>
+    </nav>
+  </div>
+</header>
+
+<div class="ticker" aria-label="Regional index ticker">
+  <div class="ticker-track" id="tickerTrack">
+    <!-- populated by js/main.js from data/index.json -->
+  </div>
+</div>
+
+<main>
+  <section class="hero" id="index">
+    <div class="wrap hero-grid">
+      <div>
+        <div class="hero-eyebrow">Q3 2026 Regional Index</div>
+        <h1>Home prices across the DMV are no longer moving together.</h1>
+        <p class="lede">Since early 2024, Northern Virginia's submarkets have pulled steadily away from the District's flat trend line, while suburban Maryland tracks in between. The index follows repeat closed sales across 40+ submarkets to show exactly where, and by how much.</p>
+        <div class="index-callout">
+          <div class="num" id="heroNum">—</div>
+          <div class="meta">
+            <strong id="heroLabel">Loading index…</strong>
+            <span id="heroSub"></span>
+          </div>
+        </div>
+      </div>
+
+      <div class="chart-panel">
+        <div class="chart-panel-head">
+          <span>Index, base <span id="baseQuarterLabel">Q1 2024</span> = 100</span>
+          <span id="chartRangeLabel">—</span>
+        </div>
+        <svg viewBox="0 0 800 300" width="100%" height="auto" role="img" id="indexChart" aria-label="Line chart comparing the housing price index for D.C., Montgomery County MD, and Fairfax County VA, showing that regional submarkets have diverged since 2024.">
+          <g stroke="#C7BEA9" stroke-width="1">
+            <line x1="40" y1="20" x2="40" y2="260"/>
+            <line x1="40" y1="260" x2="760" y2="260"/>
+            <line x1="40" y1="190" x2="760" y2="190" stroke-dasharray="2,4"/>
+            <line x1="40" y1="120" x2="760" y2="120" stroke-dasharray="2,4"/>
+            <line x1="40" y1="50" x2="760" y2="50" stroke-dasharray="2,4"/>
+          </g>
+          <g font-family="IBM Plex Mono, monospace" font-size="10" fill="#4B5261">
+            <text id="yLabel0" x="8" y="264"></text>
+            <text id="yLabel1" x="8" y="194"></text>
+            <text id="yLabel2" x="8" y="124"></text>
+            <text id="yLabel3" x="8" y="54"></text>
+          </g>
+          <g font-family="IBM Plex Mono, monospace" font-size="10" fill="#4B5261">
+            <text id="xLabel0" x="30" y="278"></text>
+            <text id="xLabel1" x="245" y="278"></text>
+            <text id="xLabel2" x="460" y="278"></text>
+            <text id="xLabel3" x="700" y="278"></text>
+          </g>
+          <polyline id="lineDc" fill="none" stroke="#2B4C7E" stroke-width="2.25" points=""/>
+          <polyline id="lineMd" fill="none" stroke="#6E8B3D" stroke-width="2.25" points=""/>
+          <polyline id="lineVa" fill="none" stroke="#A63D2F" stroke-width="2.5" points=""/>
+          <circle id="dotDc" r="3.5" fill="#2B4C7E" cx="0" cy="0"/>
+          <circle id="dotMd" r="3.5" fill="#6E8B3D" cx="0" cy="0"/>
+          <circle id="dotVa" r="3.5" fill="#A63D2F" cx="0" cy="0"/>
+        </svg>
+        <div class="legend">
+          <span class="legend-item"><span class="swatch" style="background:#2B4C7E"></span>District of Columbia</span>
+          <span class="legend-item"><span class="swatch" style="background:#6E8B3D"></span>Montgomery Co, MD</span>
+          <span class="legend-item"><span class="swatch" style="background:#A63D2F"></span>Fairfax Co, VA</span>
+        </div>
+        <div class="chart-caption">Composite index of repeat closed-sale prices. Not seasonally adjusted. <span id="asOfLabel"></span></div>
+      </div>
+    </div>
+  </section>
+
+  <section id="readings">
+    <div class="wrap">
+      <div class="section-head">
+        <h2>Regional Index Readings</h2>
+        <span class="tag" id="readingsAsOf">Loading…</span>
+      </div>
+      <div class="table-scroll">
+        <table>
+          <thead>
+            <tr>
+              <th>Submarket</th>
+              <th class="num">Index</th>
+              <th class="num">Q/Q</th>
+              <th class="num">Y/Y</th>
+            </tr>
+          </thead>
+          <tbody id="readingsBody">
+            <!-- populated by js/main.js from data/index.json -->
+          </tbody>
+        </table>
+      </div>
+    </div>
+  </section>
+
+  <section id="programs">
+    <div class="wrap">
+      <div class="section-head">
+        <h2>Research Programs</h2>
+        <span class="tag">Six standing tracks</span>
+      </div>
+      <div class="card-grid">
+        <article class="prog">
+          <span class="prog-tag">Markets</span>
+          <h3>The DMV Housing Index</h3>
+          <p>Repeat closed-sale price index for 40+ submarkets, re-based quarterly, with a rolling regional composite.</p>
+        </article>
+        <article class="prog">
+          <span class="prog-tag">Supply</span>
+          <h3>Housing Production</h3>
+          <p>Permits, pipeline, construction cost, and delivery timelines — how much housing the region actually builds.</p>
+        </article>
+        <article class="prog">
+          <span class="prog-tag">Policy</span>
+          <h3>Land Use &amp; Zoning</h3>
+          <p>Rezonings, comprehensive-plan updates, and by-right capacity changes across local jurisdictions.</p>
+        </article>
+        <article class="prog">
+          <span class="prog-tag">Affordability</span>
+          <h3>Cost Burden Index</h3>
+          <p>Rent- and price-to-income measures by submarket and household type, updated with each ACS release.</p>
+        </article>
+        <article class="prog">
+          <span class="prog-tag">Capital</span>
+          <h3>Investment Flows</h3>
+          <p>Multifamily and commercial transaction volume, cap rates, lender mix, and out-of-region buyer activity.</p>
+        </article>
+        <article class="prog">
+          <span class="prog-tag">People</span>
+          <h3>Migration &amp; Demand</h3>
+          <p>Domestic and international migration, federal employment shifts, and household formation.</p>
+        </article>
+      </div>
+    </div>
+  </section>
+
+  <section id="briefings">
+    <div class="wrap">
+      <div class="section-head">
+        <h2>Latest Briefings</h2>
+        <span class="tag">Research &amp; Notes</span>
+      </div>
+      <div class="briefings">
+        <article class="brief">
+          <div class="brief-date">Aug 2026</div>
+          <div>
+            <span class="brief-tag">Submarket Note</span>
+            <h3><a href="research.html">Why McLean's high end is outrunning the rest of Fairfax</a></h3>
+            <p>A short read on inventory scarcity above $2M and what it's doing to days-on-market across 22101 and 22102.</p>
+          </div>
+        </article>
+        <article class="brief">
+          <div class="brief-date">Jul 2026</div>
+          <div>
+            <span class="brief-tag">Market Note</span>
+            <h3><a href="research.html">The District's flat quarter, explained</a></h3>
+            <p>DC condo supply is absorbing faster than single-family, pulling the composite index sideways for a third straight quarter.</p>
+          </div>
+        </article>
+        <article class="brief">
+          <div class="brief-date">Jun 2026</div>
+          <div>
+            <span class="brief-tag">Methodology</span>
+            <h3><a href="methodology.html">Repeat-sales vs. median price: why the index moves differently than the headlines</a></h3>
+            <p>A plain-language walkthrough of how the index isolates true price change from shifts in what happened to sell.</p>
+          </div>
+        </article>
+        <article class="brief">
+          <div class="brief-date">Jun 2026</div>
+          <div>
+            <span class="brief-tag">Quarterly Report</span>
+            <h3><a href="research.html">Q2 2026 Regional Briefing</a></h3>
+            <p>Full submarket breakdown, inventory trends, and a look at rate sensitivity across the DMV.</p>
+          </div>
+        </article>
+      </div>
+      <p style="margin-top:22px"><a class="mono-link" href="research.html">All research &amp; data →</a></p>
+    </div>
+  </section>
+
+  <section id="methodology">
+    <div class="wrap two-col">
+      <div class="prose dropcap">
+        <div class="section-head" style="margin-bottom:18px;">
+          <h2>Methodology</h2>
+        </div>
+        <p>The DMV Housing Index tracks repeat closed sales recorded through Bright MLS across the District of Columbia and the Northern Virginia and suburban Maryland counties, re-based to Q1 2024 = 100. Because it follows the same homes over time rather than averaging whatever happened to sell in a given month, it isolates price change from shifts in what's selling — a persistent blind spot in median and average price figures.</p>
+        <p>Submarkets are defined by county and, where volume supports it, by ZIP code. Each reading uses a trailing three-month sales window and is revised once the following quarter's closings are recorded.</p>
+        <a class="doc-link" href="methodology.html">Read the full methodology →</a>
+      </div>
+      <div class="about-card">
+        <h3>About the Institute</h3>
+        <p>The Institute is an independent research effort founded by Eddy, a McLean-based Bright MLS agent and software developer, to bring the same rigor real estate professionals use internally to the public record.</p>
+        <p>Data updates quarterly. Commentary and briefings are written in-house, not syndicated.</p>
+        <p>Questions or press inquiries: <a href="mailto:research@dmvrei.org">research@dmvrei.org</a></p>
+      </div>
+    </div>
+  </section>
+</main>
+
+<div class="subscribe" id="subscribe">
+  <div class="wrap">
+    <div>
+      <h2>Get the briefing</h2>
+      <p>Quarterly index readings and submarket notes, direct to your inbox. No spam, unsubscribe anytime.</p>
+    </div>
+    <form class="sub-form">
+      <input type="email" placeholder="you@email.com" aria-label="Email address" required>
+      <button type="submit">Subscribe</button>
+      <span class="sub-msg" role="status" aria-live="polite"></span>
+    </form>
+  </div>
+</div>
+
+<footer class="site-footer">
+  <div class="wrap">
+    <span>DMV Real Estate Research Institute · © <span data-year>2026</span></span>
+    <span class="disclosure">Index data sourced from Bright MLS closed transactions. Not a substitute for a comparative market analysis — for a property-specific valuation, contact a licensed agent.</span>
+  </div>
+</footer>
+
+<script src="js/main.js"></script>
+</body>
+</html>

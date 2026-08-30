@@ -1,0 +1,32 @@
+{
+  "asOf": "2026-08-30",
+  "baseQuarter": "Q1 2024",
+  "series": {
+    "quarters": ["Q1'24","Q2'24","Q3'24","Q4'24","Q1'25","Q2'25","Q3'25","Q4'25","Q1'26","Q2'26","Q3'26"],
+    "dc":  [100, 101, 99, 98, 100, 103, 105, 104, 106, 108, 107.0],
+    "md":  [100, 102, 104, 103, 106, 109, 111, 110, 113, 116, 118.2],
+    "va":  [100, 103, 106, 108, 111, 114, 117, 119, 122, 125, 128.4]
+  },
+  "featured": {
+    "label": "Fairfax County Index, Q3 2026",
+    "index": 128.4,
+    "qoq": 2.4,
+    "yoy": 14.3
+  },
+  "ticker": [
+    { "name": "DC", "region": "dc", "index": 107.0, "qoq": 0.9 },
+    { "name": "MONTGOMERY CO, MD", "region": "md", "index": 118.2, "qoq": 1.7 },
+    { "name": "FAIRFAX CO, VA", "region": "va", "index": 128.4, "qoq": 2.4 },
+    { "name": "ARLINGTON CO, VA", "region": "va", "index": 124.7, "qoq": 2.1 },
+    { "name": "ALEXANDRIA CITY, VA", "region": "va", "index": 119.8, "qoq": 1.5 },
+    { "name": "MCLEAN, VA (22101/22102)", "region": "va", "index": 131.6, "qoq": 2.8 }
+  ],
+  "readings": [
+    { "name": "District of Columbia", "region": "dc", "index": 107.0, "qoq": 0.9, "yoy": 5.1 },
+    { "name": "Montgomery County, MD", "region": "md", "index": 118.2, "qoq": 1.7, "yoy": 9.8 },
+    { "name": "Fairfax County, VA", "region": "va", "index": 128.4, "qoq": 2.4, "yoy": 14.3 },
+    { "name": "Arlington County, VA", "region": "va", "index": 124.7, "qoq": 2.1, "yoy": 12.6 },
+    { "name": "Alexandria City, VA", "region": "va", "index": 119.8, "qoq": 1.5, "yoy": 10.4 },
+    { "name": "McLean, VA (22101 / 22102)", "region": "va", "index": 131.6, "qoq": 2.8, "yoy": 15.7 }
+  ]
+}

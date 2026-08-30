@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Contact — DMV Real Estate Research Institute</title>
+<meta name="description" content="Contact the DMV Real Estate Research Institute for briefings, data requests, press, or research partnerships.">
+<link rel="icon" href="assets/logo.svg" type="image/svg+xml">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Source+Serif+4:ital,opsz,wght@0,8..60,400;0,8..60,500;0,8..60,600;0,8..60,700;1,8..60,500&family=IBM+Plex+Sans:wght@400;500;600&family=IBM+Plex+Mono:wght@400;500;600&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="css/styles.css">
+</head>
+<body>
+
+<div class="masthead-bar">
+  <div class="wrap">
+    <span>Washington Metro Edition</span>
+    <span>Updated Quarterly · Data via Bright MLS</span>
+  </div>
+</div>
+
+<header class="masthead">
+  <div class="wrap">
+    <a class="brand" href="index.html">
+      <div class="brand-eyebrow">Independent Housing Market Research</div>
+      <div class="brand-name">DMV Real Estate<br>Research Institute</div>
+    </a>
+    <nav class="main-nav" aria-label="Primary">
+      <a href="index.html">Index</a>
+      <a href="research.html">Research</a>
+      <a href="methodology.html">Methodology</a>
+      <a href="about.html">About</a>
+      <a href="contact.html">Contact</a>
+    </nav>
+  </div>
+</header>
+
+<main>
+  <section class="page-hero">
+    <div class="wrap">
+      <div class="kicker">Contact</div>
+      <h1>Get in touch</h1>
+      <p>Briefings, data requests, press inquiries, and research partnerships. We usually reply within two business days.</p>
+    </div>
+  </section>
+
+  <section>
+    <div class="wrap">
+      <div class="two-col">
+        <div>
+          <div class="section-head"><h2>Send a message</h2></div>
+          <form class="form" data-contact>
+            <div class="field">
+              <label for="name">Name</label>
+              <input type="text" id="name" name="name" autocomplete="name" required>
+            </div>
+            <div class="field">
+              <label for="org">Organization (optional)</label>
+              <input type="text" id="org" name="org" autocomplete="organization">
+            </div>
+            <div class="field">
+              <label for="email">Email</label>
+              <input type="email" id="email" name="email" autocomplete="email" required>
+            </div>
+            <div class="field">
+              <label for="interest">Topic</label>
+              <select id="interest" name="interest">
+                <option>Quarterly briefing subscription</option>
+                <option>A specific dataset or reading</option>
+                <option>Press / media inquiry</option>
+                <option>Research partnership or sponsorship</option>
+                <option>Correction or data question</option>
+                <option>Something else</option>
+              </select>
+            </div>
+            <div class="field">
+              <label for="message">Message</label>
+              <textarea id="message" name="message" required></textarea>
+            </div>
+            <button class="btn" type="submit">Send message</button>
+            <p class="form-status" role="status" aria-live="polite"></p>
+            <p class="form-note">This starter form opens your email client with the message pre-filled. To collect submissions automatically, connect it to a form service or your own endpoint.</p>
+          </form>
+        </div>
+
+        <div class="about-card">
+          <h3>Direct</h3>
+          <p><strong>General &amp; research</strong><br><a href="mailto:research@dmvrei.org">research@dmvrei.org</a></p>
+          <p><strong>Press</strong><br><a href="mailto:press@dmvrei.org">press@dmvrei.org</a></p>
+          <p><strong>Location</strong><br>McLean, Virginia<br>Washington metro</p>
+          <p style="margin-top:16px"><strong>Response time</strong><br>Two business days, typically</p>
+        </div>
+      </div>
+    </div>
+  </section>
+</main>
+
+<div class="subscribe" id="subscribe">
+  <div class="wrap">
+    <div>
+      <h2>Get the briefing</h2>
+      <p>Quarterly index readings and submarket notes, direct to your inbox. No spam, unsubscribe anytime.</p>
+    </div>
+    <form class="sub-form">
+      <input type="email" placeholder="you@email.com" aria-label="Email address" required>
+      <button type="submit">Subscribe</button>
+      <span class="sub-msg" role="status" aria-live="polite"></span>
+    </form>
+  </div>
+</div>
+
+<footer class="site-footer">
+  <div class="wrap">
+    <span>DMV Real Estate Research Institute · © <span data-year>2026</span></span>
+    <span class="disclosure">Index data sourced from Bright MLS closed transactions. Not a substitute for a comparative market analysis — for a property-specific valuation, contact a licensed agent.</span>
+  </div>
+</footer>
+
+<script src="js/main.js"></script>
+</body>
+</html>
