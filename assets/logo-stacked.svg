@@ -1,0 +1,17 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 300 250" role="img" aria-label="DMV Real Estate Research Institute">
+  <g transform="translate(100,12)">
+    <rect x="3" y="3" width="94" height="94" fill="none" stroke="#1C2430" stroke-width="2"/>
+    <rect x="7.5" y="7.5" width="85" height="85" fill="none" stroke="#1C2430" stroke-width="1"/>
+    <line x1="20" y1="26" x2="80" y2="26" stroke="#A79C82" stroke-width="1"/>
+    <line x1="20" y1="74" x2="80" y2="74" stroke="#4B5261" stroke-width="1"/>
+    <rect x="26.5" y="52" width="7" height="22" fill="#2B4C7E"/>
+    <rect x="46.5" y="40" width="7" height="34" fill="#6E8B3D"/>
+    <rect x="66.5" y="28" width="7" height="46" fill="#A63D2F"/>
+    <polyline points="30,52 50,40 70,28" fill="none" stroke="#1C2430" stroke-width="2.5" stroke-linejoin="round" stroke-linecap="round"/>
+    <circle cx="70" cy="28" r="3.2" fill="#1C2430"/>
+  </g>
+  <text x="150" y="150" text-anchor="middle" font-family="'Source Serif 4', Georgia, 'Times New Roman', serif" font-weight="700" font-size="26" fill="#1C2430">DMV Real Estate</text>
+  <text x="150" y="180" text-anchor="middle" font-family="'Source Serif 4', Georgia, 'Times New Roman', serif" font-weight="700" font-size="26" fill="#1C2430">Research Institute</text>
+  <line x1="70" y1="198" x2="230" y2="198" stroke="#A79C82" stroke-width="1"/>
+  <text x="150" y="217" text-anchor="middle" font-family="'IBM Plex Mono', 'Courier New', monospace" font-weight="500" font-size="10" letter-spacing="1.5" fill="#4B5261">INDEPENDENT HOUSING MARKET RESEARCH</text>
+</svg>

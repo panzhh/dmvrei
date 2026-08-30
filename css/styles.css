@@ -53,8 +53,11 @@ img{max-width:100%;}
   border-bottom:3px double var(--ink);
 }
 .masthead .wrap{display:flex; justify-content:space-between; align-items:flex-end; gap:24px; flex-wrap:wrap;}
-.brand{display:block; text-decoration:none; color:inherit;}
+.brand{display:flex; align-items:center; gap:18px; text-decoration:none; color:inherit;}
+.brand-mark{flex:none; width:54px; height:54px; display:block;}
+.brand-lines{display:block;}
 .brand-eyebrow{
+  display:block;
   font-family:var(--mono);
   font-size:11px;
   letter-spacing:.12em;
@@ -63,6 +66,7 @@ img{max-width:100%;}
   margin-bottom:8px;
 }
 .brand-name{
+  display:block;
   font-family:var(--serif);
   font-weight:700;
   font-size:clamp(28px, 4.2vw, 44px);
@@ -426,6 +430,8 @@ footer.site-footer .disclosure{max-width:46ch;}
 @media (max-width:560px){
   .card-grid, .card-grid.cols-2{grid-template-columns:1fr;}
   .masthead .wrap{align-items:flex-start;}
+  .brand{gap:12px;}
+  .brand-mark{width:42px; height:42px;}
 }
 
 :focus-visible{outline:2px solid var(--dc); outline-offset:2px;}
